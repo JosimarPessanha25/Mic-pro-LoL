@@ -1,0 +1,6 @@
+{
+  "name": "Mic pro LoL",
+  "description": "Voice chat system for League of Legends teams with Hextech aesthetic and WebRTC low-latency audio.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-lo-dark: #010a13;
+  --color-lo-blue: #0ac8b9;
+  --color-lo-gold: #c89b3c;
+  --color-lo-gold-dark: #785a28;
+  --color-lo-bg: #091428;
+  --color-lo-border: #1e2328;
+  --color-lo-muted: #a09b8c;
+  --color-lo-text: #f0e6d2;
+}
+
+@layer components {
+  .btn-hextech {
+     @apply px-4 py-1.5 border border-lo-gold bg-lo-gold/10 text-lo-gold text-[10px] uppercase font-bold tracking-[0.2em] hover:bg-lo-gold/20 hover:shadow-[0_0_15px_rgba(200,155,60,0.3)] transition-all cursor-pointer;
+  }
+  
+  .btn-danger {
+    @apply bg-red-900/40 hover:bg-red-800 border border-red-500 text-red-100 font-bold px-4 md:px-10 py-3 uppercase text-[10px] md:text-sm tracking-[0.2em] shadow-[0_0_20px_rgba(239,68,68,0.2)] transition-all cursor-pointer;
+  }
+
+  .ad-placeholder {
+    @apply border border-lo-gold/20 bg-lo-bg/50 flex items-center justify-center text-center p-4 relative overflow-hidden;
+    background-image: 
+      linear-gradient(45deg, transparent 48%, rgba(200, 155, 60, 0.05) 50%, transparent 52%);
+    background-size: 10px 10px;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-lo-dark text-lo-text font-sans;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(3, 151, 171, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(200, 155, 60, 0.05) 0%, transparent 40%);
+  }
+}
+
+.hextech-border {
+  position: relative;
+  border: 1px solid theme('colors.lo-gold-dark');
+}
+
+.hextech-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border: 1px solid theme('colors.lo-gold');
+  clip-path: polygon(0 0, 10px 0, 0 10px, 0 0, 100% 0, 100% 10px, calc(100% - 10px) 0, 100% 0, 100% 100%, 100% calc(100% - 10px), calc(100% - 10px) 100%, 100% 100%, 0 100%, 0 calc(100% - 10px), 10px 100%, 0 100%);
+  pointer-events: none;
+}
+
+.hextech-gradient {
+  background: linear-gradient(135deg, rgba(30, 35, 40, 0.9) 0%, rgba(10, 20, 40, 0.9) 100%);
+  backdrop-filter: blur(12px);
+}
+
+.speaking-glow {
+  box-shadow: 0 0 15px theme('colors.lo-blue');
+  border-color: theme('colors.lo-blue') !important;
+}
