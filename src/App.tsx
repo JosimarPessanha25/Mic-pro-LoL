@@ -68,14 +68,14 @@ interface TranslationSet {
 
 const TRANSLATIONS: Record<Language, TranslationSet> = {
   en: {
-    title: 'MIC for LoL',
+    title: 'CallofLeague',
     tacticalVoice: 'Tactical Voice',
     roomLabel: 'ROOM',
     statusLabel: 'Connection',
     statusActive: 'Stable',
     inviteBtn: 'Invite',
     copiedBtn: 'Copied!',
-    headerSubtitle: 'League of Legends',
+    headerSubtitle: 'CallofLeague',
     nickLabel: 'Summoner Nickname',
     nickPlaceholder: 'EX: T1 FAKER',
     joinBtn: 'Start Connection',
@@ -107,14 +107,14 @@ const TRANSLATIONS: Record<Language, TranslationSet> = {
     newWorldsSubtitle: 'Check this week\'s releases.',
   },
   pt: {
-    title: 'Mic pro LoL',
+    title: 'CallofLeague',
     tacticalVoice: 'Voz Tática',
     roomLabel: 'SALA',
     statusLabel: 'Sinal',
     statusActive: 'Estável',
     inviteBtn: 'Convidar',
     copiedBtn: 'Copiado!',
-    headerSubtitle: 'League of Legends',
+    headerSubtitle: 'CallofLeague',
     nickLabel: 'Nickname do Invocador',
     nickPlaceholder: 'EX: T1 FAKER',
     joinBtn: 'Iniciar Conexão',
@@ -424,10 +424,8 @@ export default function App() {
           <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-lo-gold"></div>
 
           <div className="flex flex-col items-center mb-10">
-            <div className="w-20 h-20 border-2 border-lo-gold flex items-center justify-center rotate-45 mb-8 shadow-[0_0_20px_rgba(200,170,110,0.2)]">
-              <div className="-rotate-45 text-lo-gold">
-                <Mic size={40} />
-              </div>
+            <div className="w-20 h-20 mb-8 rounded-full overflow-hidden shadow-[0_0_20px_rgba(200,170,110,0.2)] border-2 border-lo-gold">
+              <img src="/league.png" alt="CallofLeague Logo" className="w-full h-full object-cover" />
             </div>
             <h1 className="text-3xl font-black text-lo-text tracking-widest uppercase mb-1">{t.title}</h1>
             <div className="flex items-center gap-2">
@@ -496,8 +494,8 @@ export default function App() {
       {/* Header */}
       <header className="h-16 shrink-0 flex items-center justify-between px-3 md:px-8 border-b border-lo-gold/30 bg-gradient-to-b from-lo-bg to-lo-dark shadow-lg">
         <div className="flex items-center gap-2 md:gap-4">
-          <div className="w-8 h-8 md:w-10 md:h-10 border-2 border-lo-gold flex items-center justify-center rotate-45 bg-lo-dark">
-            <div className="-rotate-45 font-bold text-[8px] md:text-[10px] text-lo-gold">MIC</div>
+          <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-lo-gold shadow-[0_0_10px_rgba(200,170,110,0.2)]">
+            <img src="/league.png" alt="CallofLeague Logo" className="w-full h-full object-cover" />
           </div>
           <div className="flex flex-col">
             <span className="text-[8px] md:text-[10px] uppercase tracking-widest text-lo-muted font-semibold leading-none">{t.tacticalVoice}</span>
