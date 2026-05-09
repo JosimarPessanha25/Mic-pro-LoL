@@ -824,8 +824,8 @@ function ParticipantCard({
             {t.speakingLabel}
           </div>
         )}
-        {isMuted && !isSpeaking && (
-          <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-tighter">
+        {isMuted && (
+          <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-tighter z-20">
             {t.mutedLabel}
           </div>
         )}
